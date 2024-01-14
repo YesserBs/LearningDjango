@@ -1,0 +1,47 @@
+Mes notes:
+
+
+support:
+https://www.youtube.com/watch?v=Z4D3M-NSN58&list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9
+
+étapes:
+
+0- installer django: pip install django
+
+1- créer un projet (monprojet) 'django-admin startproject monprojet'
+On trouve un fichiers et un dossier:
+le fichier 'manager.py' nous permet  de lancer le serveur, gestion de bd et plein de choses
+et on a le dossier 'monprojet' dans lequel on trouve d'autres fichiers
+notamment:
+'__init__' qui indique que le projet est équivalent a un package
+'asgi' & 'wsgi' a ne pas s'en soucier
+'settings' parametres, on peut configurer le type de bd par exemple
+'urls'
+-> on a crée un projet
+un projet est constitué d'une ou plusieurs applications, une application
+c'est de la logique pour une partie de notre 'application web' par exemple
+une application pour le login, une autre pour le menu principal je suppose
+
+2- créer une application
+'python manage.py startapp monapp'
+l'application comporte aussi plein de fichiers:
+'__init__' deja expliqué
+'views' contient des fonctions qui retournent les "views" cad une fonction
+qui retourne une interface/page web
+
+3- on crée un fichier 'urls.py'
+dans ce fichier on va mettre l'url correspendante a chaque view exemple:
+urlpatterns = [path("", views.index, name="LaViewIndex")], normalment
+ici la view index qu'on a déclaré dans views (retournée par la fonction index)
+sera accessible par l'url "" (vide) et nommée LaViewIndex
+
+4- on modifie le fichier 'urls.py' du projet (pas celui qu'on a crée)
+je suppose que ces urls sont la base, cad les touts premiers caracteres
+qu'on peut saisir dans l'url, puis elle peut etre suivie de n'importe
+quel mot present dans les urls d'une application exemple, la base ici c:
+"
+urlpatterns = [
+path("admin/", admin.site.urls),
+path("", include('monapp.urls')) #peut etre suivie par les urls definis dans l'app
+]
+"
