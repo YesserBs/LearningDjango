@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=Z4D3M-NSN58&list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VY
 
 étapes:
 
+I- Initialisation
+
 0- installer django: pip install django
 
 1- créer un projet (monprojet) 'django-admin startproject monprojet'
@@ -45,3 +47,30 @@ path("admin/", admin.site.urls),
 path("", include('monapp.urls')) #peut etre suivie par les urls definis dans l'app
 ]
 "
+
+5- passer a une autre page en utilisant l'url;
+si les étapes et commentaires précedants sont claires, cette étape devrait etre
+facile, voici ce qu'on fait:
+D'abbord on ajoute une view (fonction qui retourne une iterface) dans le fichier
+views.py par exemple:
+"
+def page2(request):
+    return HttpResponse("Voici une autre page!")
+"
+ensuite on lui attribut une interface dans url.py (de l'appli bien sure, on n'a
+plus a se soucier de url.py du projet pour l'instant)
+on ajoute le path:
+"
+    path('page2/', views.page2, name='page2'),
+"
+ca marche
+
+II- Base de données
+
+1- ajouter une ligne a settings.py:
+dans settings.py il u a une liste INSTALLED_APPS, ajouter la ligne suivante:
+'nom_de_lapplication.apps.Nom_de_lapplicationConfig', exemple
+'monapp.apps.MonappConfig', (de préference utiliser les quotes '' et respecter les
+majuscules dans MonappConfig)
+on l'ajoute pour indquer a django les applications qui ont des dependences de la base
+de données pour qu'ils soient mis a jour
