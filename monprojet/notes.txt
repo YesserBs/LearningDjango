@@ -68,9 +68,11 @@ ca marche
 II- Base de données
 
 1- ajouter une ligne a settings.py:
-dans settings.py il u a une liste INSTALLED_APPS, ajouter la ligne suivante:
+dans settings.py il y a une liste INSTALLED_APPS, ajouter la ligne suivante:
 'nom_de_lapplication.apps.Nom_de_lapplicationConfig', exemple
 'monapp.apps.MonappConfig', (de préference utiliser les quotes '' et respecter les
 majuscules dans MonappConfig)
-on l'ajoute pour indquer a django les applications qui ont des dependences de la base
-de données pour qu'ils soient mis a jour
+on l'ajoute pour indquer a django les applications qui ont des dependences de la
+base de données pour qu'ils soient mis a jour puis on execute la commande suivante
+au niveau du dossier monapp (cad executer la cmd dans le dossier de l'application):
+"python manage.py migrate"
