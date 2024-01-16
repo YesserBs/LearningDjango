@@ -73,6 +73,65 @@ dans settings.py il y a une liste INSTALLED_APPS, ajouter la ligne suivante:
 'monapp.apps.MonappConfig', (de préference utiliser les quotes '' et respecter les
 majuscules dans MonappConfig)
 on l'ajoute pour indquer a django les applications qui ont des dependences de la
-base de données pour qu'ils soient mis a jour puis on execute la commande suivante
-au niveau du dossier monapp (cad executer la cmd dans le dossier de l'application):
-"python manage.py migrate"
+base de données pour qu'ils soient mis a jour (cette partie est deja expliquée a
+l'étape 3 mais je ne vais pas la supprimer: puis on execute la commande suivante
+au niveau du dossier monapp (cad executer la cmnd dans le dossier de l'application):
+"python manage.py migrate")
+
+2- executer la commande de migration
+au niveau du dossier du projet (non pas le package qui a le meme not du projet)
+executer cette commande: 'python manage.py migrate'
+
+3- creer des models (classes)
+au niveau du fichier models.py de l'application par exemple:
+"
+from django.db import models
+class ToDoList(models.Model): #hérite de models.Model
+    name = models.CharField(max_lenght=200)
+
+    def __str__(self):  #l'equivalent de toString en java
+        return self.name
+
+class Item(models.Model):
+    todolist = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
+    ''' cette ligne veut dire que cet attribut n'est pas de type
+    standard comme int string..., foreignkey veut dire clé étrangère
+    normalment et le truc de onDelete je suppose que c un truc du
+    genre composition '''
+"
+=> On a donc crée deux classes
+
+4- Alerter django de la modification des classes et les enregistrer
+dans cd meme dossier (dans notre exemple: ../monprojet)
+executer cette commande:
+python manage.py makemigrations nom_de_lapplication
+'python manage.py makemigrations monapp' ds notre ex
+On peut faire l'analogie de cette commande avec 'commit' dans git
+on enregistre les changements
+maintenant l'equivalent de push de git c "python manage.py migrate"
+(effectuer la commande dans le meme chemain /monprojet)
+
+5- ajouter des elements a la BD
+pour executer des queries:
+dans le meme dossier (qui contient manage.py)
+'python manage.py shell'
+--------PART I-------commandes et fonctionalités---------
+'quit()' pour quitter shell
+Rq: on peut executer nimporte quel ligne python valide par exemple print
+'from monapp.models import Item, ToDoList' importer les classes qu'on
+aimerait manipuler du dossier monapp, normalment si on etait dedans (dossier
+monapp) on ne devrait pas spécifier monapp.models
+'truc = Truc(parametre1="p1", parametre2="p2")' creer une instance de Truc
+exemple: 'p1 = Personne(nom="Jhon", prenom="Doe")'
+'p1.save()' p1 a été enregistré dans la bd
+'personnes = Personne.objects.all()' personnes contient toutes les personnes
+sauvgardées en bd, maintnant on peut les afficher pour voir: print(personnes)
+'ToDoList.objects.get(condition)' retourne les objects sauvgardés qui
+satisfaient la condition
+ou on aurait pu faire 'TDLs.get(condition)'
+par condition je veux dire par exemple nom="Jhon" ou bien id=2...
+'p1.delete()' 'p2.delete()' 'personnes.delete()' supprimer
+'personnes.filter(nom__startswith="Mohammed")' ou bien
+'personnes.filter(id=5)' ceci est utile contre les exceptons
+Pour visualiser les changements on fait ceci:
+--------PART II-------commandes et fonctionalités---------
