@@ -57,8 +57,8 @@ views.py par exemple:
 def page2(request):
     return HttpResponse("Voici une autre page!")
 "
-ensuite on lui attribut une interface dans url.py (de l'appli bien sure, on n'a
-plus a se soucier de url.py du projet pour l'instant)
+ensuite on lui attribut une interface dans url.py (de l'appli bien sure, on
+n'a plus a se soucier de url.py du projet pour l'instant)
 on ajoute le path:
 "
     path('page2/', views.page2, name='page2'),
@@ -70,17 +70,18 @@ II- Base de données
 1- ajouter une ligne a settings.py:
 dans settings.py il y a une liste INSTALLED_APPS, ajouter la ligne suivante:
 'nom_de_lapplication.apps.Nom_de_lapplicationConfig', exemple
-'monapp.apps.MonappConfig', (de préference utiliser les quotes '' et respecter les
-majuscules dans MonappConfig)
-on l'ajoute pour indquer a django les applications qui ont des dependences de la
-base de données pour qu'ils soient mis a jour (cette partie est deja expliquée a
-l'étape 3 mais je ne vais pas la supprimer: puis on execute la commande suivante
-au niveau du dossier monapp (cad executer la cmnd dans le dossier de l'application):
-"python manage.py migrate")
+'monapp.apps.MonappConfig', (de préference utiliser les quotes '' et
+respecter les majuscules dans MonappConfig)
+on l'ajoute pour indquer a django les applications qui ont des dependences
+de la base de données pour qu'ils soient mis a jour (cette partie est deja
+expliquée a l'étape 3 mais je ne vais pas la supprimer: puis on execute la
+commande suivante au niveau du dossier monapp (cad executer la cmnd dans le
+dossier de l'application): "python manage.py migrate")
 
 2- executer la commande de migration
-au niveau du dossier du projet (non pas le package qui a le meme not du projet)
-executer cette commande: 'python manage.py migrate'
+au niveau du dossier du projet (non pas le package qui a le meme not du
+projet) executer cette commande: 'python manage.py migrate'
+je crois quee c'a n'a pas tjrs d'effets
 
 3- creer des models (classes)
 au niveau du fichier models.py de l'application par exemple:
@@ -133,5 +134,25 @@ par condition je veux dire par exemple nom="Jhon" ou bien id=2...
 'p1.delete()' 'p2.delete()' 'personnes.delete()' supprimer
 'personnes.filter(nom__startswith="Mohammed")' ou bien
 'personnes.filter(id=5)' ceci est utile contre les exceptons
-Pour visualiser les changements on fait ceci:
---------PART II-------commandes et fonctionalités---------
+Il y aurait normalment une deuxieme partie pour les commandes
+(--------PART II-------commandes et fonctionalités---------)
+
+6- Ajouter un admin pour visualiser le contenu de la bd
+Pour visualiser les changements d'abord on doit créer un superuser
+(administrateur):
+'python manage.py createsuperuser'
+puis donner le nom et mdp
+appres on peut lancer le serveur de nouveau et tester le profil
+apres il faut accorder l'access a la bd au dashboard (l'interface)
+comme ceci:
+Dans admin.py
+on importe les classes (model) dont on a besoin:
+from .models import la_ou_les_class
+#aussi:
+admin.site.register(la_class)
+--> Afin de pratiquer, voici un guide etape par etape pour effacer
+une application du projet
+--> Retirer l'application de INSTALLED_APPS dans le fichier settings
+--> Pas sure mais executer 'python manage.py migrate monapp zero'
+--> Supprimer les fichiers de l'application
+
