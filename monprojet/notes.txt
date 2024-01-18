@@ -1,6 +1,5 @@
 Mes notes:
 
-
 support:
 https://www.youtube.com/watch?v=Z4D3M-NSN58&list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9
 
@@ -18,11 +17,11 @@ notamment:
 '__init__' qui indique que le projet est équivalent a un package
 'asgi' & 'wsgi' a ne pas s'en soucier
 'settings' parametres, on peut configurer le type de bd par exemple
-'urls'
+'urls' ou on déclare les urls de base (/ ou /admin)
 -> on a crée un projet
 un projet est constitué d'une ou plusieurs applications, une application
 c'est de la logique pour une partie de notre 'application web' par exemple
-une application pour le login, une autre pour le menu principal je suppose
+une application pour le login, une autre pour le menu principal
 
 2- créer une application
 'python manage.py startapp monapp'
@@ -156,3 +155,10 @@ une application du projet
 --> Pas sure mais executer 'python manage.py migrate monapp zero'
 --> Supprimer les fichiers de l'application
 
+III- Templates:
+
+1- Créer les dossiers nécessaires:
+Dans l'application concernée créer un dossier 'Templates' (vérifier
+l'orthographe) dans ce dossier créer un dossier qui a exactement le
+meme nom que l'application, dans ce dossier on va mettre nos fichiers
+html :)

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Site Django{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Mon Site Django{% endblock %}</h1>
+    </header>
+
+    <main>
+        {% block content %}Hello world!{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mon Site Django. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

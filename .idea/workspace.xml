@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="006e7761-6931-44e2-ba78-b0685e4bf57c" name="Changes" comment="execution de quelques commandes sql avec l'ORM">
+    <list default="true" id="006e7761-6931-44e2-ba78-b0685e4bf57c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monprojet/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monapp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monprojet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/monprojet/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/monprojet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/monprojet/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monprojet/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,13 +78,21 @@
       <option name="project" value="LOCAL" />
       <updated>1705394298238</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pratiquer: effacer et créer une nouvelle application de 0">
+      <created>1705486512055</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705486512055</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remarques sur l'initialisation et les differentes étapes" />
     <MESSAGE value="fin de l'etape 1 et nouvelle étape 'Base de données'" />
     <MESSAGE value="execution de quelques commandes sql avec l'ORM" />
-    <option name="LAST_COMMIT_MESSAGE" value="execution de quelques commandes sql avec l'ORM" />
+    <MESSAGE value="Pratiquer: effacer et créer une nouvelle application de 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pratiquer: effacer et créer une nouvelle application de 0" />
   </component>
 </project>
