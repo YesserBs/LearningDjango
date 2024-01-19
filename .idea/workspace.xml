@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006e7761-6931-44e2-ba78-b0685e4bf57c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monprojet/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/monprojet/myapp/templates/myapp/homePage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705486512055</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Nouvelle étape: Templates">
+      <created>1705603981749</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705603981749</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -93,6 +98,7 @@
     <MESSAGE value="fin de l'etape 1 et nouvelle étape 'Base de données'" />
     <MESSAGE value="execution de quelques commandes sql avec l'ORM" />
     <MESSAGE value="Pratiquer: effacer et créer une nouvelle application de 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pratiquer: effacer et créer une nouvelle application de 0" />
+    <MESSAGE value="Nouvelle étape: Templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nouvelle étape: Templates" />
   </component>
 </project>

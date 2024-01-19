@@ -162,3 +162,6 @@ Dans l'application concernée créer un dossier 'Templates' (vérifier
 l'orthographe) dans ce dossier créer un dossier qui a exactement le
 meme nom que l'application, dans ce dossier on va mettre nos fichiers
 html :)
+
+REMARQUE:
+je crois que je devrais apprendre flask plutot :)
